@@ -1,12 +1,12 @@
 import Navbar from '../componentes/navbar/Navbar'
-import Productos from "../componentes/productos/Productos";
+import BooksList from '../componentes/productos/Bookslist';
 
 
 const Tienda = () => {
     return( 
         <>
         <Navbar/>
-        <Productos/> 
+        <BooksList/> 
         </>
     );
 };
