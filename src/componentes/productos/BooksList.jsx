@@ -25,8 +25,8 @@ const BookList = () => {
       <ul>
         {books.map((book) => (
         <li key={book.id}>
-            {book.title} - {book.authors} 
-            <img src={book.image_url} alt={book.title} />
+            <div><img src={book.image_url} alt={book.title} /></div>            
+            <div>{book.title} - {book.authors} </div>
             <div><button>Comprar</button></div>
         </li>
         ))}

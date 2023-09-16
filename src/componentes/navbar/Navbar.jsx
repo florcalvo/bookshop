@@ -5,6 +5,7 @@ import './Navbar.css'
 function NavBar() {
   return (
     <nav>
+
       <NavLink to={"/"}>Home</NavLink>
       <NavLink to={"/tienda"}>Store</NavLink>
       <NavLink to={"/Cart"}>Cart</NavLink>
