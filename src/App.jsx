@@ -7,6 +7,7 @@ import BooksList from './componentes/productos/Bookslist';
 
 function App() {
   return (
+    <>
     <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home/>}></Route> 
@@ -15,6 +16,7 @@ function App() {
           <Route path="*" element={<h3>Ruta inexistente</h3>}></Route>
         </Routes>
     </BrowserRouter>
+    </>
   );
 }
 
