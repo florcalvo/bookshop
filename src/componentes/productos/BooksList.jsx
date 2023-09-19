@@ -41,10 +41,8 @@ const BookList = () => {
   const endIndex = startIndex + booksPerPage;
 
   const generadorDePrecio = () => {
-    const minPrice = 1500;
-    const maxPrice = 5000;
     const precioRandom =
-      Math.floor(Math.random() * (maxPrice - minPrice + 1)) + minPrice;
+      Math.floor(Math.random() * (5000 - 1500 + 1)) + 1500;
     return precioRandom;
   };
 
@@ -62,7 +60,7 @@ const BookList = () => {
     setBooks(librosOrdenados);
   };
 
-  const handleInputChange = (event) => {
+  const handleInput = (event) => {
     setSearchQuery(event.target.value);
   };
 
@@ -77,7 +75,7 @@ const BookList = () => {
       <div className='libros'>
         <h1> La lectura es un viaje. ¡Ven a explorarlo con nosotros! </h1>
         <h2>Lista de Libros</h2>
-        <input type='text'placeholder='Buscar libros' value={searchQuery} onChange={handleInputChange} className='barraDeBusqueda'/>
+        <input type='text'placeholder='Buscar libros' value={searchQuery} onChange={handleInput} className='barraDeBusqueda'/>
         <div className='productos'>
           <ul>
             {booksParaMostrar.map((book) => (
